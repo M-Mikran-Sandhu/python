@@ -10,7 +10,19 @@ A curated collection of Python scripts designed for beginners and intermediate l
     cd <repository_directory>
     ```
 2.  **Ensure Python is Installed:** Download Python from [python.org](https://www.python.org/downloads/) if you haven't already.
-3.  **Run Individual Scripts:**
+3.  **Install Dependencies:**
+    Some scripts might require external libraries (e.g., `matplotlib`, `requests`, `Pygments`). If you see an `ImportError`, install the required library using pip. The `requirements.txt` file lists dependencies for tools like the HTML index generator.
+    ```bash
+    pip install -r requirements.txt 
+    ```
+    Alternatively, install common ones you might encounter for individual scripts:
+    ```bash
+    pip install matplotlib requests
+    ```
+4.  **Browse Scripts via HTML Index:**
+    Open the `index.html` file (located in the root of this repository) in your web browser for a categorized view of all scripts with syntax highlighting. This is often the easiest way to explore the code. If `index.html` is not present or outdated, you can generate it using the instructions in the 'Generating the HTML Index Page' section below.
+
+5.  **Run Individual Scripts:**
     Most scripts are self-contained. Navigate to the repository's root directory and run them using:
     ```bash
     python script_name.py
@@ -27,15 +39,28 @@ A curated collection of Python scripts designed for beginners and intermediate l
     python main.py
     cd ..
     ```
-4.  **Install Dependencies:**
-    Some scripts might require external libraries (e.g., `matplotlib`, `requests`). If you see an `ImportError`, install the required library using pip:
+
+## Generating the HTML Index Page
+
+This repository includes a script `generate_html_index.py` that creates an `index.html` file, providing a browsable interface with syntax-highlighted code for all Python scripts.
+
+To generate or update `index.html`:
+
+1.  **Install Dependencies for the Generator:**
+    The `generate_html_index.py` script requires the `Pygments` library. Ensure it's installed. You can install all necessary dependencies listed in `requirements.txt` by running:
     ```bash
-    pip install library_name
+    pip install -r requirements.txt
     ```
-    Common ones you might encounter:
+    Alternatively, install `Pygments` directly:
     ```bash
-    pip install matplotlib requests
+    pip install Pygments
     ```
+2.  **Run the Generator Script:**
+    From the root directory of the repository:
+    ```bash
+    python generate_html_index.py
+    ```
+    This will create or overwrite the `index.html` file in the root directory. Open this file in a web browser to view the scripts.
 
 ## Topics Covered
 
