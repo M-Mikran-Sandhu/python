@@ -11,12 +11,12 @@ A curated collection of Python scripts designed for beginners and intermediate l
     ```
 2.  **Ensure Python is Installed:** Download Python from [python.org](https://www.python.org/downloads/) if you haven't already.
 3.  **Install Dependencies:**
-    Some scripts require external libraries. The `requirements.txt` file lists all major dependencies for this repository, including those for the HTML index generator, general utility scripts, and the new advanced examples (TensorFlow for AI, SQLAlchemy for database, Requests/BeautifulSoup4 for web tasks).
+    Some scripts require external libraries. The `requirements.txt` file lists all major dependencies for this repository, including those for the HTML index generator, general utility scripts, and the new advanced examples (TensorFlow for AI, SQLAlchemy for database, Requests/BeautifulSoup4 for web tasks, NumPy for numerical computing, Pandas for data manipulation, Matplotlib for plotting, Pillow for image processing).
     Install them using:
     ```bash
     pip install -r requirements.txt 
     ```
-    For individual scripts, if you encounter an `ImportError` and haven't run the command above, you might need to install specific libraries (e.g., `pip install tensorflow sqlalchemy requests beautifulsoup4`).
+    For individual scripts, if you encounter an `ImportError` and haven't run the command above, you might need to install specific libraries (e.g., `pip install tensorflow sqlalchemy requests beautifulsoup4 numpy pandas matplotlib Pillow`).
 4.  **Browse Scripts via HTML Index:**
     Open the `index.html` file (located in the root of this repository) in your web browser for a categorized view of all scripts with syntax highlighting. This is often the easiest way to explore the code. If `index.html` is not present or outdated, you can generate it using the instructions in the 'Generating the HTML Index Page' section below.
 
@@ -138,6 +138,33 @@ This section highlights examples using powerful external libraries for specific 
 *   **Example (`web_search_example.py`):** Provides a function to perform a Google search for a given term and attempts to extract the title of the search results page. 
     *Note: This example is for illustrative purposes and may be rate-limited or blocked by Google if used excessively. Always respect website terms of service.*
 *   **To Run:** `python web_search_example.py`
+
+### d. Numerical Computing with NumPy (`numpy_example.py`)
+*   **Library:** [NumPy](https://numpy.org/)
+*   **Purpose:** The fundamental package for numerical computing in Python. It provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.
+*   **Example (`numpy_example.py`):** Demonstrates creating NumPy arrays, array reshaping, slicing, performing various mathematical operations (element-wise, dot product), and calculating aggregate statistics (sum, min, max, mean).
+*   **To Run:** `python numpy_example.py`
+
+### e. Data Manipulation with Pandas (`pandas_example.py`)
+*   **Library:** [Pandas](https://pandas.pydata.org/)
+*   **Purpose:** A powerful and easy-to-use open-source data analysis and manipulation tool, built on top of Python. It provides data structures like Series (1D) and DataFrame (2D) for handling structured data.
+*   **Example (`pandas_example.py`):** Shows how to create DataFrames (from dictionaries and NumPy arrays), inspect data (`head`, `info`, `describe`), select columns and rows (`loc`, `iloc`), filter data based on conditions, add new columns, and perform simple `groupby` operations.
+*   **To Run:** `python pandas_example.py`
+
+### f. Data Visualization with Matplotlib (`matplotlib_example.py`)
+*   **Library:** [Matplotlib](https://matplotlib.org/)
+*   **Purpose:** A comprehensive library for creating static, animated, and interactive visualizations in Python. It can produce plots, histograms, power spectra, bar charts, error charts, scatterplots, etc., with just a few lines of code.
+*   **Example (`matplotlib_example.py`):** Demonstrates how to create basic plots: a line plot, a bar chart, and a scatter plot using sample data (generated with NumPy). The script saves these plots as PNG image files (`line_plot_example.png`, `bar_chart_example.png`, `scatter_plot_example.png`) in the repository's root directory.
+*   **To Run:** `python matplotlib_example.py` (This will generate image files, not display plots directly unless modified).
+
+### g. Image Processing with Pillow (`image_processing_example.py`)
+*   **Library:** [Pillow (PIL Fork)](https://pillow.readthedocs.io/)
+*   **Purpose:** A powerful yet easy-to-use library for opening, manipulating, and saving many different image file formats. It is a fork of the Python Imaging Library (PIL).
+*   **Example (`image_processing_example.py`):** 
+    1.  First, the script generates a simple sample image (`sample_generated_image.png`) using Matplotlib.
+    2.  Then, it uses Pillow to open this image and perform several operations: displaying image info, converting to grayscale, resizing, rotating, and applying a blur filter. 
+    3.  The modified images are saved with descriptive names (e.g., `grayscale_example.png`, `resized_example.png`).
+*   **To Run:** `python image_processing_example.py` (This will generate/overwrite image files in the root directory).
 
 ## Contributing
 Contributions are welcome! If you have new scripts, improvements, or bug fixes:
