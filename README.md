@@ -11,12 +11,12 @@ A curated collection of Python scripts designed for beginners and intermediate l
     ```
 2.  **Ensure Python is Installed:** Download Python from [python.org](https://www.python.org/downloads/) if you haven't already.
 3.  **Install Dependencies:**
-    Some scripts require external libraries. The `requirements.txt` file lists all major dependencies for this repository, including those for the HTML index generator, general utility scripts, and the new advanced examples (TensorFlow for AI, SQLAlchemy for database, Requests/BeautifulSoup4 for web tasks, NumPy for numerical computing, Pandas for data manipulation, Matplotlib for plotting, Pillow for image processing).
+    Some scripts require external libraries. The `requirements.txt` file lists all major dependencies for this repository, including those for the HTML index generator, general utility scripts, and the new advanced examples (TensorFlow for AI, SQLAlchemy for database, Requests/BeautifulSoup4 for web tasks, NumPy for numerical computing, Pandas for data manipulation, Matplotlib for plotting, Pillow for image processing, Flask for web development, Scikit-learn for machine learning, NLTK for natural language processing).
     Install them using:
     ```bash
     pip install -r requirements.txt 
     ```
-    For individual scripts, if you encounter an `ImportError` and haven't run the command above, you might need to install specific libraries (e.g., `pip install tensorflow sqlalchemy requests beautifulsoup4 numpy pandas matplotlib Pillow`).
+    For individual scripts, if you encounter an `ImportError` and haven't run the command above, you might need to install specific libraries (e.g., `pip install tensorflow sqlalchemy requests beautifulsoup4 numpy pandas matplotlib Pillow Flask scikit-learn nltk`).
 4.  **Browse Scripts via HTML Index:**
     Open the `index.html` file (located in the root of this repository) in your web browser for a categorized view of all scripts with syntax highlighting. This is often the easiest way to explore the code. If `index.html` is not present or outdated, you can generate it using the instructions in the 'Generating the HTML Index Page' section below.
 
@@ -165,6 +165,44 @@ This section highlights examples using powerful external libraries for specific 
     2.  Then, it uses Pillow to open this image and perform several operations: displaying image info, converting to grayscale, resizing, rotating, and applying a blur filter. 
     3.  The modified images are saved with descriptive names (e.g., `grayscale_example.png`, `resized_example.png`).
 *   **To Run:** `python image_processing_example.py` (This will generate/overwrite image files in the root directory).
+
+### h. Web Development with Flask (`flask_web_app_example.py`)
+*   **Library:** [Flask](https://flask.palletsprojects.com/)
+*   **Purpose:** A lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It's known as a "microframework" because it keeps the core simple but extensible.
+*   **Example (`flask_web_app_example.py`):** Sets up a minimal web server with several routes:
+    *   `/`: A basic homepage.
+    *   `/time`: Displays the current server time.
+    *   `/api/data`: Returns a sample JSON response.
+    *   `/user/<username>`: Demonstrates dynamic routing by greeting a user.
+*   **To Run:** 
+    1.  Execute `python flask_web_app_example.py`.
+    2.  The script will print URLs to the console (e.g., `http://127.0.0.1:5000/`).
+    3.  Open these URLs in your web browser to interact with the application.
+    4.  Press `CTRL+C` in the terminal to stop the server.
+
+### i. Machine Learning with Scikit-learn (`scikit_learn_example.py`)
+*   **Library:** [Scikit-learn](https://scikit-learn.org/stable/)
+*   **Purpose:** A comprehensive and widely-used library for machine learning in Python. It provides simple and efficient tools for data mining and data analysis, including algorithms for classification, regression, clustering, dimensionality reduction, model selection, and preprocessing.
+*   **Example (`scikit_learn_example.py`):** Demonstrates a typical machine learning workflow:
+    1.  Loads the built-in Iris dataset.
+    2.  Splits the data into training and testing sets.
+    3.  Trains a `RandomForestClassifier` model.
+    4.  Makes predictions on the test set.
+    5.  Evaluates the model's performance using accuracy and a classification report.
+    6.  Shows how to predict the class of a new, unseen data sample.
+*   **To Run:** `python scikit_learn_example.py`
+
+### j. Natural Language Processing with NLTK (`nltk_example.py`)
+*   **Library:** [NLTK (Natural Language Toolkit)](https://www.nltk.org/)
+*   **Purpose:** A leading platform for building Python programs to work with human language data. It provides easy-to-use interfaces to over 50 corpora and lexical resources, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning.
+*   **Example (`nltk_example.py`):** Demonstrates fundamental NLP tasks:
+    1.  Sentence and word tokenization.
+    2.  Part-of-Speech (POS) tagging.
+    3.  Stemming (using Porter Stemmer).
+    4.  Lemmatization (using WordNet Lemmatizer).
+*   **Important Note on NLTK Data:** NLTK requires specific data packages (corpora, taggers, etc.) for many of its operations. The `nltk_example.py` script includes a helper function that attempts to automatically download the necessary resources (`punkt` for tokenization, `averaged_perceptron_tagger` for POS tagging, `wordnet` and `omw-1.4` for lemmatization). 
+    *   If the automatic download fails or if you encounter issues, you might need to run `nltk.download()` in an interactive Python session to manually download these resources. The script provides some guidance on this.
+*   **To Run:** `python nltk_example.py`
 
 ## Contributing
 Contributions are welcome! If you have new scripts, improvements, or bug fixes:

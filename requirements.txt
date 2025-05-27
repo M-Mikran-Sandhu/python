@@ -6,3 +6,7 @@ numpy
 pandas
 matplotlib
 Pillow
+Flask
+scikit-learn
+nltk
+opencv-python
