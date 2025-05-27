@@ -1,1 +1,4 @@
-Pygments>=2.0
+tensorflow
+SQLAlchemy
+requests
+beautifulsoup4

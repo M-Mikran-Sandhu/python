@@ -11,14 +11,12 @@ A curated collection of Python scripts designed for beginners and intermediate l
     ```
 2.  **Ensure Python is Installed:** Download Python from [python.org](https://www.python.org/downloads/) if you haven't already.
 3.  **Install Dependencies:**
-    Some scripts might require external libraries (e.g., `matplotlib`, `requests`, `Pygments`). If you see an `ImportError`, install the required library using pip. The `requirements.txt` file lists dependencies for tools like the HTML index generator.
+    Some scripts require external libraries. The `requirements.txt` file lists all major dependencies for this repository, including those for the HTML index generator, general utility scripts, and the new advanced examples (TensorFlow for AI, SQLAlchemy for database, Requests/BeautifulSoup4 for web tasks).
+    Install them using:
     ```bash
     pip install -r requirements.txt 
     ```
-    Alternatively, install common ones you might encounter for individual scripts:
-    ```bash
-    pip install matplotlib requests
-    ```
+    For individual scripts, if you encounter an `ImportError` and haven't run the command above, you might need to install specific libraries (e.g., `pip install tensorflow sqlalchemy requests beautifulsoup4`).
 4.  **Browse Scripts via HTML Index:**
     Open the `index.html` file (located in the root of this repository) in your web browser for a categorized view of all scripts with syntax highlighting. This is often the easiest way to explore the code. If `index.html` is not present or outdated, you can generate it using the instructions in the 'Generating the HTML Index Page' section below.
 
@@ -115,6 +113,31 @@ To generate or update `index.html`:
 ### 5. Miscellaneous
 *   `CHATGPT.py`: (Purpose unclear from name - to be reviewed)
 *   `Exercise no 1.py`, `Exercise no 2.py`: General exercises.
+
+## Advanced Library Examples
+
+This section highlights examples using powerful external libraries for specific tasks. Make sure you have installed the necessary dependencies from `requirements.txt` before running these.
+
+### a. AI with TensorFlow (`ai_example.py`)
+*   **Library:** [TensorFlow](https://www.tensorflow.org/)
+*   **Purpose:** A comprehensive open-source platform for machine learning and artificial intelligence.
+*   **Example (`ai_example.py`):** Demonstrates basic TensorFlow setup, tensor creation, a simple arithmetic operation, and a minimal neural network layer using Keras. This script verifies that TensorFlow can be imported and run.
+*   **To Run:** `python ai_example.py`
+
+### b. Database Interaction with SQLAlchemy (`database_example.py`)
+*   **Library:** [SQLAlchemy](https://www.sqlalchemy.org/)
+*   **Purpose:** A SQL toolkit and Object-Relational Mapper (ORM) that gives application developers the full power and flexibility of SQL.
+*   **Example (`database_example.py`):** Shows how to set up an in-memory SQLite database, define a `User` model, create the corresponding table, and perform basic CRUD (Create, Read, Update, Delete) operations.
+*   **To Run:** `python database_example.py`
+
+### c. Web Interaction with Requests and BeautifulSoup (`web_search_example.py`)
+*   **Libraries:** 
+    *   [Requests](https://requests.readthedocs.io/): An elegant and simple HTTP library for Python.
+    *   [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/): A library for pulling data out of HTML and XML files.
+*   **Purpose:** Used together for fetching web pages (Requests) and parsing their content (BeautifulSoup).
+*   **Example (`web_search_example.py`):** Provides a function to perform a Google search for a given term and attempts to extract the title of the search results page. 
+    *Note: This example is for illustrative purposes and may be rate-limited or blocked by Google if used excessively. Always respect website terms of service.*
+*   **To Run:** `python web_search_example.py`
 
 ## Contributing
 Contributions are welcome! If you have new scripts, improvements, or bug fixes:
